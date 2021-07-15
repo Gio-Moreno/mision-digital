@@ -5,6 +5,16 @@ TemplateMo - Finance Business
 https://templatemo.com/tm-545-finance-business
 
 */
+:root{
+    --main-color: #02D1F8;
+    --main-color-gradient: #007186;
+    --opossite-color: #FF1800;
+    --opossite-color-gradient: #D91500;
+    --complementary-color: #FFB000;
+    --complementary-color-gradient: #D99600;
+    --background-complementary-color: linear-gradient(to bottom, var(--complementary-color), var(--complementary-color-gradient)) ;
+}
+
 
 body {
     font-family: 'Poppins', sans-serif;
@@ -45,11 +55,12 @@ a.menu-button{
 }
 
 a.menu-filled-button {
-    background: linear-gradient(to bottom, #ffcd29, #b58f12) ;
+    background: var(--background-complementary-color) ;
     color: #fff;
     font-size: 16px;
     text-transform: uppercase;
     font-weight: 700;
+    margin-top: 3px;
     padding: 8px 30px;
     border-radius: 15px;
     display: inline-block;
@@ -57,18 +68,19 @@ a.menu-filled-button {
 }
 
 a.menu-filled-button:hover {
-    background: linear-gradient(to bottom, #b58f12, #b58f12) ;
-    color: #ffcd29;
+    background: var(--background-complementary-color) ;
+    color: var(--opossite-color);
 }
 
 a.filled-button {
-    background: linear-gradient(to bottom, #a4c639, #6b8122) ;
+    background: linear-gradient(to bottom, var(--main-color), var(--main-color-gradient)) ;
+    
     color: #fff;
     font-size: 13px;
     text-transform: uppercase;
     font-weight: 700;
-    padding: 12px 30px;
-    border-radius: 30px;
+    padding: 10px 30px;
+    border-radius: 20px;
     display: inline-block;
     transition: all 0.3s;
 }
@@ -77,24 +89,24 @@ a.filled-button {
 
 a.filled-button:hover {
     background-color: #fff;
-    color: #a4c639;
+    color: var(--main-color);
 }
 
 a.filled-button-secondary{
     background: linear-gradient(to bottom, hsla(0, 0%, 0%, 0.8), hsla(0, 0%, 0%, 0.8)) ;
-    border: 3px solid #a4c639 ;
+    border: 3px solid var(--main-color) ;
     color: #fff;
     font-size: 13px;
     text-transform: uppercase;
     font-weight: 500;
-    padding: 12px 30px;
-    border-radius: 30px;
+    padding: 8px 30px;
+    border-radius: 20px;
     display: inline-block;
     transition: all 0.3s;
 }
 
 a.border-button {
-    background-color: #a4c639;
+    background-color: var(--main-color);
     color: #fff;
     border: 2px solid #fff;
     font-size: 1rem;
@@ -108,7 +120,7 @@ a.border-button {
 
 a.border-button:hover {
     background-color: #fff;
-    color: #a4c639;
+    color: var(--main-color);
 }
 
 .section-heading {
@@ -124,7 +136,7 @@ a.border-button:hover {
 
 .section-heading em {
     font-style: normal;
-    color: #a4c639;
+    color: var(--main-color);
 }
 
 .section-heading span {
@@ -161,7 +173,7 @@ a.border-button:hover {
 }
 
 #preloader .jumper>div {
-    background-color: #a4c639;
+    background-color: var(--main-color);
     width: 10px;
     height: 10px;
     border-radius: 100%;
@@ -290,7 +302,7 @@ header {
 }
 
 header .navbar {
-    padding: 20px 0px;
+    padding-top: 20px;
 }
 
 .background-header .navbar {
@@ -300,16 +312,23 @@ header .navbar {
 .background-header {
     top: 0;
     position: fixed;
-    background-color: #fff!important;
+    background-color: hsla(0, 0%, 98%, 0.99)!important;
     box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.1);
 }
 
  .navbar-brand .logo {
-    width: 150px;
+    margin-top: 10px;
+    width: 250px;
+}
+
+@media (max-width: 720px){
+    .navbar-brand .logo{
+        width: 200px;
+    }
 }
 
 .background-header .navbar-brand h2 {
-    color: #a4c639!important;
+    color: var(--main-color)!important;
 }
 
 .background-header .navbar-nav a.nav-link {
@@ -321,12 +340,12 @@ header .navbar {
 .background-header .navbar-nav .nav-link.active,
 .background-header .navbar-nav .nav-link.show,
 .background-header .navbar-nav .show>.nav-link {
-    color: #a4c639!important;
+    color: var(--main-color)!important;
 }
 
 .navbar .navbar-brand {
     float: left;
-    margin-top: 12px;
+    margin-top: 0px;
     outline: none;
 }
 
@@ -373,8 +392,8 @@ header .navbar {
 .navbar .navbar-nav .nav-link.active,
 .navbar .navbar-nav .nav-link.show,
 .navbar .navbar-nav .show>.nav-link {
-    color: #a4c639;
-    border-bottom: 3px solid #a4c639;
+    color: var(--main-color);
+    border-bottom: 3px solid var(--main-color);
 }
 
 .navbar .navbar-toggler-icon {
@@ -393,7 +412,7 @@ header .navbar {
 
 .navbar .navbar-toggler-icon:after {
     content: '\f0c9';
-    color: #a4c639;
+    color: var(--main-color);
     font-size: 18px;
     line-height: 26px;
     font-family: 'FontAwesome';
@@ -531,20 +550,20 @@ ul.slick-dots {
 
 .Modern-Slider .item .h-slides {
     margin-bottom: 15px;
-    font-size: 22px;
+    font-size: 1rem;
     text-transform: uppercase;
-    font-weight: 700;
+    font-weight: 300;
     letter-spacing: 1px;
-    color: #a4c639;
+    color: #F0F0F0;
     animation: fadeOutRight 1s both;
 }
 
 .Modern-Slider .item h4 {
     margin-bottom: 30px;
-    text-transform: uppercase;
+    
     font-size: 44px;
-    font-weight: 700;
-    letter-spacing: 2.5px;
+    font-weight: 600;
+    letter-spacing: 2px;
     color: #FFF;
     overflow: hidden;
     animation: fadeOutLeft 1s both;
@@ -712,7 +731,7 @@ ul.slick-dots {
 }
 
 .request-form h4 i{
-    background: linear-gradient(to bottom, #a4c639, #6b8122) ;
+    background: var(--background-complementary-color);
     border-radius: 10px;
     padding: 6px;
     padding-left: 9px;
@@ -768,7 +787,7 @@ ul.slick-dots {
 
 .value-proposition em {
     font-style: normal;
-    color: #a4c639;
+    color: var(--main-color);
 }
 
 .value-proposition p {
@@ -803,7 +822,7 @@ ul.slick-dots {
 .item-value i{
     margin-right: 20px;
     margin-top: 8px;
-    color: #9DBD36;
+    color: var(--opossite-color);
 }
 
 @media (max-width: 720px) {
@@ -871,7 +890,7 @@ ul.slick-dots {
 
 .fun-facts em {
     font-style: normal;
-    color: #a4c639;
+    color: var(--main-color);
 }
 
 .fun-facts p {
@@ -892,7 +911,7 @@ ul.slick-dots {
 
 .count-digit {
     margin: 5px 0px;
-    color: #a4c639;
+    color: var(--main-color);
     font-weight: 700;
     font-size: 36px;
 }
@@ -950,7 +969,7 @@ ul.slick-dots {
 
 .more-info .right-content em {
     font-style: normal;
-    color: #a4c639;
+    color: var(--main-color);
 }
 
 .more-info .right-content p {
@@ -995,7 +1014,7 @@ ul.slick-dots {
     margin-top: 8px;
     font-weight: 600;
     font-size: 14px;
-    color: #a4c639;
+    color: var(--main-color);
 }
 
 .testimonial-item img {
@@ -1090,7 +1109,7 @@ ul.slick-dots {
 }
 
 .callback-form .contact-form button.border-button {
-    background-color: #a4c639;
+    background-color: var(--main-color);
     color: #fff;
     border: 2px solid #fff;
     font-size: 13px;
@@ -1108,11 +1127,11 @@ ul.slick-dots {
 
 .callback-form .contact-form button.border-button:hover {
     background-color: #fff;
-    color: #a4c639;
+    color: var(--main-color);
 }
 
 .contact-us .contact-form button.filled-button {
-    background-color: #a4c639;
+    background-color: var(--main-color);
     color: #fff;
     border: none;
     font-size: 13px;
@@ -1130,7 +1149,7 @@ ul.slick-dots {
 
 .contact-us .contact-form button.filled-button:hover {
     background-color: #fff;
-    color: #a4c639;
+    color: var(--main-color);
 }
 
 
@@ -1203,7 +1222,7 @@ footer ul.social-icons li a {
 }
 
 footer ul.social-icons li a:hover {
-    background-color: #a4c639;
+    background-color: var(--main-color);
 }
 
 footer ul.menu-list li {
@@ -1221,7 +1240,7 @@ footer ul.menu-list li a {
 }
 
 footer ul.menu-list li a:hover {
-    color: #a4c639;
+    color: var(--main-color);
 }
 
 footer .contact-form input {
@@ -1286,7 +1305,7 @@ footer .contact-form ::placeholder {
 footer .contact-form button.filled-button {
     background-color: transparent;
     color: #fff;
-    background-color: #a4c639;
+    background-color: var(--main-color);
     border: none;
     font-size: 13px;
     text-transform: uppercase;
@@ -1303,7 +1322,7 @@ footer .contact-form button.filled-button {
 
 footer .contact-form button.filled-button:hover {
     background-color: #fff;
-    color: #a4c639;
+    color: var(--main-color);
 }
 
 
@@ -1323,6 +1342,11 @@ footer .contact-form button.filled-button:hover {
 
 .sub-footer a {
     color: #fff;
+}
+
+.sub-footer img{
+    height: 1.5rem;
+    margin-left: 10px;
 }
 
 .page-heading {
@@ -1379,7 +1403,7 @@ footer .contact-form button.filled-button:hover {
 }
 
 .team-item .down-content span {
-    color: #a4c639;
+    color: var(--main-color);
     font-weight: 600;
     font-size: 14px;
     display: block;
@@ -1457,7 +1481,7 @@ footer .contact-form button.filled-button:hover {
 }
 
 #tabs ul .ui-tabs-active a {
-    color: #a4c639;
+    color: var(--main-color);
 }
 
 #tabs ul .ui-tabs-active span {
@@ -1504,7 +1528,7 @@ footer .contact-form button.filled-button:hover {
 }
 
 .contact-information .contact-item i {
-    color: #a4c639;
+    color: var(--main-color);
     font-size: 48px;
     margin-bottom: 40px;
 }
@@ -1522,7 +1546,7 @@ footer .contact-form button.filled-button:hover {
 
 .contact-information .contact-item a {
     font-weight: 600;
-    color: #a4c639;
+    color: var(--main-color);
     font-size: 15px;
 }
 
@@ -1635,7 +1659,7 @@ footer .contact-form button.filled-button:hover {
     .navbar .navbar-nav .nav-link.active,
     .navbar .navbar-nav .nav-link.show,
     .navbar .navbar-nav .show>.nav-link {
-        color: #a4c639!important;
+        color: var(--main-color)!important;
         border-bottom: none!important;
     }
 }
