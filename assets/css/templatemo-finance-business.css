@@ -15,6 +15,9 @@ https://templatemo.com/tm-545-finance-business
     --background-complementary-color: linear-gradient(to bottom, var(--complementary-color), var(--complementary-color-gradient)) ;
 }
 
+.html{
+    
+}
 
 body {
     font-family: 'Poppins', sans-serif;
@@ -22,6 +25,7 @@ body {
     text-rendering: optimizeLegibility;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+    scroll-behavior: smooth;
 }
 
 p {
@@ -469,19 +473,16 @@ header .navbar {
     background-size: cover;
     background-position: center center;
     background-repeat: no-repeat;
-    height: 95vh;
+    max-height: 600px;
 }
 
-#video-back {
-    position: fixed;
-    height: 95vh;
-}
+
 
 .Modern-Slider .item-1 .img-fill {
     background: url(../images/slide_01.jpg);
     background-size: cover;    
     background-repeat: no-repeat;
-    height: 95vh;
+    height: 100vh;
 }
 
 .Modern-Slider .item-2 .img-fill {
@@ -718,15 +719,15 @@ ul.slick-dots {
 }
 
 .request-form {    
-    padding: 40px 0px;
-    color: #fff;
+    padding: 24px 0px;
+    color: #f1f1f1;
     
     
 }
 
 .request-form h4 {
     font-size: 22px;
-    font-weight: 600;
+    font-weight: 300;
     margin: 0 auto;
 }
 
@@ -734,10 +735,11 @@ ul.slick-dots {
     background: var(--background-complementary-color);
     border-radius: 10px;
     padding: 6px;
-    padding-left: 9px;
+    
     margin-right: 10px;
     width: 35px;
     height: 35px;
+    box-shadow: -2px 2px 3px #000000;
     
 }
 
@@ -755,6 +757,27 @@ ul.slick-dots {
 
 .wapp-button {
     margin: auto auto;
+}
+
+/* Stakes */
+
+.main-stake{
+    margin: 0 auto;
+    max-width: 1170px;
+    background-image: url(../images/tirar-dinero.jpg);
+    background-position: bottom;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position-y: 100px;
+}
+
+.one-liner-section{
+    padding-bottom: 400px;
+}
+
+.one-liner-section b{
+    color: #3f3f3f;
+    
 }
 
 /* Value Proposition */
@@ -818,11 +841,18 @@ ul.slick-dots {
     text-align: left;
     margin-bottom: 20px;
 }
+.iv-2{
+    width: 100%;
+}
 
 .item-value i{
     margin-right: 20px;
     margin-top: 8px;
     color: var(--opossite-color);
+}
+
+.iv-2 i{
+    margin-top: 3px;
 }
 
 @media (max-width: 720px) {
@@ -832,19 +862,62 @@ ul.slick-dots {
     
 }
 
+
+.guide{
+    background-image: url(../images/fun-facts-bg.jpg);
+    background-size: cover;
+    padding: 100px 0;
+    background-position: center;
+    color: #f3f3f3;
+}
+
+.guide-items{
+    display: flex;
+    padding: 0 50px;
+}
+
+.guide-logos h4{
+    font-weight: 600;
+    text-align: center;margin-bottom: 30px;
+}
+
+@media (max-width: 720px){
+    .guide-items{
+        display: inline;
+        padding: 0;
+    }
+}
+
 /* Services */
 
 .services {
     margin-top: 50px;
 }
 
+.service-item-container{
+    border: 2px solid hsla(0, 0%, 83%, 0.4);
+    
+}
+
+.border-radius-start{
+    border-end-start-radius: 20px;
+}
+
+.border-radius-end{
+    border-end-end-radius: 20px;
+}
+
 .service-item img {
     width: 100%;
     overflow: hidden;
+    border-radius: 20px;
+    box-shadow: 0 3px 5px #00000090;
+}
+.down-content{
+    text-align: center;
 }
 
 .service-item .down-content {
-    background-color: #f7f7f7;
     padding: 30px;
 }
 
@@ -853,17 +926,26 @@ ul.slick-dots {
     font-weight: 700;
     letter-spacing: 0.25px;
     margin-bottom: 15px;
+    
 }
 
 .service-item .down-content p {
     margin-bottom: 20px;
+    
+   
 }
+
+.down-content a{
+   color: #6f6f6f;
+   background: transparent;
+}
+
 
 
 /* Fun Facts */
 
-.fun-facts {
-    margin-top: 140px;
+.plan {
+    
     background-image: url(../images/fun-facts-bg.jpg);
     background-position: center center;
     background-repeat: no-repeat;
@@ -871,9 +953,10 @@ ul.slick-dots {
     background-attachment: fixed;
     padding: 140px 0px;
     color: #fff;
+    margin-bottom: 100px;
 }
 
-.fun-facts span {
+.plan span {
     text-transform: uppercase;
     font-size: 15px;
     color: #fff;
@@ -882,36 +965,74 @@ ul.slick-dots {
     display: block;
 }
 
-.fun-facts h2 {
+.plan h2 {
     font-size: 36px;
     font-weight: 600;
     margin-bottom: 35px;
 }
 
-.fun-facts em {
+.plan em {
     font-style: normal;
     color: var(--main-color);
 }
 
-.fun-facts p {
+.plan p {
     color: #fff;
     margin-bottom: 40px;
 }
 
-.fun-facts .left-content {
+.plan .left-content {
     margin-right: 45px;
 }
 
+.plan-steps{
+    margin: 0 auto;
+}
+
+.plan-steps h2{
+    text-align: center;
+}
+
+.plan-steps h2 .filled-button{
+    margin-top: 50px;
+}
+
+
+.plan-step img {
+    width: 100px;
+    overflow: hidden;
+    margin-bottom: 20px;
+}
+
+.plan .ex-pharagraph .left-content{
+    margin: 0 auto;
+    text-align: center;
+    margin-top: 100px;
+    margin-bottom: -200px;
+    background-color: #1f1f1f;
+    padding: 50px;
+    border-radius: 20px;
+    box-shadow: 0 5px 10px #000;
+}
+
+@media (max-width:720px){
+    .plan .ex-pharagraph .left-content{
+        padding: 50px 10px;
+    }
+}
+
+
+
 .count-area-content {
     text-align: center;
-    background-color: rgba(250, 250, 250, 0.1);
+    background-color: rgb(95, 95, 95);
     padding: 25px 30px 35px 30px;
     margin: 15px 0px;
 }
 
 .count-digit {
     margin: 5px 0px;
-    color: var(--main-color);
+    color: var(--complementary-color);
     font-weight: 700;
     font-size: 36px;
 }
@@ -919,28 +1040,40 @@ ul.slick-dots {
 .count-title {
     font-size: 20px;
     font-weight: 600;
-    color: #fff;
+    color: #f3f3f3;
     letter-spacing: 0.5px;
 }
 
+.
 
 /* More Info */
 
-.more-info {
-    margin-top: 140px;
+
+
+.more-info .row{
+    margin-top: 100px ;
+    border: 2px solid rgb(255, 255, 255);
+    border-radius: 10px;
+    box-shadow: 0 0px 10px lightgray;
+}
+
+.clases {
+    padding: 40px 0;
 }
 
 .more-info .left-image img {
+    
     width: 100%;
     overflow: hidden;
+    justify-content: center;
+    margin: 0 auto;
 }
 
-.more-info .more-info-content {
-    background-color: #f7f7f7;
-}
 
 .about-info .more-info-content {
     background-color: transparent;
+    
+    
 }
 
 .about-info .right-content {
@@ -975,6 +1108,8 @@ ul.slick-dots {
 .more-info .right-content p {
     margin-bottom: 30px;
 }
+
+
 
 
 /* Testimonials Style */
@@ -1160,9 +1295,8 @@ ul.slick-dots {
 }
 
 .partners {
-    margin-top: 140px;
-    background-color: #f7f7f7;
-    padding: 60px 0px;
+        
+    margin-bottom: 80px;
 }
 
 .partners .owl-item {
@@ -1172,9 +1306,46 @@ ul.slick-dots {
 
 .partners .partner-item img {
     max-width: 156px;
-    margin: auto;
+    margin: 0 auto;
+    position:relative;
+    
 }
 
+
+
+
+
+.container-pre-footer{
+    background: var(--background-complementary-color);
+    margin-top: 80px;
+    padding: 24px 0;
+}
+
+.pre-footer{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: middle;
+    
+}
+
+.pre-footer h5{
+    line-height: 2.5rem;    
+    font-weight: 600;
+    color: #ffffff;
+    text-shadow: -2px 1px 1px #2f2f2f;
+
+}
+
+@media (max-width: 720px){
+    .pre-footer{
+        display: inline;
+        text-align: center;
+    }
+
+    .pre-footer h5{
+        margin-bottom: 20px;
+    }
+}
 
 /* Footer Style */
 
@@ -1393,6 +1564,7 @@ footer .contact-form button.filled-button:hover {
 .team-item .down-content {
     background-color: #fff;
     padding: 30px;
+    
 }
 
 .team-item .down-content h4 {
@@ -1588,7 +1760,7 @@ footer .contact-form button.filled-button:hover {
     .services .service-item {
         margin-bottom: 30px;
     }
-    .fun-facts .left-content {
+    .plan .left-content {
         margin-right: 0px;
         margin-bottom: 30px;
     }
