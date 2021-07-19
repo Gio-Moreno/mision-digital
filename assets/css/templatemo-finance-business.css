@@ -54,6 +54,7 @@ h6 {
     margin: 0px;
 }
 
+
 a.menu-button{
     
 }
@@ -866,11 +867,15 @@ ul.slick-dots {
 .guide{
     background-image: url(../images/fun-facts-bg.jpg);
     background-size: cover;
-    padding: 100px 0;
+    padding: 100px 0 30px 0;
     background-position: center;
     color: #f3f3f3;
 }
 
+.guide h2, .guide h3{
+    text-align: center;
+    margin: 0 auto;
+}
 .guide-items{
     display: flex;
     padding: 0 50px;
@@ -1100,10 +1105,11 @@ ul.slick-dots {
     
 }
 
-.more-info .right-content em {
+.more-info .right-content em, .more-info em {
     font-style: normal;
     color: var(--main-color);
 }
+
 
 .more-info .right-content p {
     margin-bottom: 30px;
@@ -1586,7 +1592,36 @@ footer .contact-form button.filled-button:hover {
     margin-bottom: 20px;
 }
 
+.guide .fa-angle-double-down{
+    font-size: 50px;
+    margin-top: 10px;
+    color: var(--opossite-color);
+    opacity: 0.5;
+    animation-duration: 2s;
+    animation-name: slidedown;
+    animation-iteration-count: infinite;
 
+}
+
+    @keyframes slidedown{
+        from{
+            opacity: 0.5;
+            position: relative;
+            top: -10px;
+        }
+
+        50%{
+            opacity: 1;
+            position: relative;
+            top: 20px;
+        }
+        to{
+            opacity: 0.5;
+            position: relative;
+            top: -10px;
+        }
+        
+    }
 /* Single Service */
 
 .single-services {
