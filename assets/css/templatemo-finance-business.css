@@ -93,6 +93,10 @@ h6 {
     background: linear-gradient(to bottom, var(--complementary-color), var(--complementary-color-gradient)) ;
 }
 
+.bg-op-color{
+    background: linear-gradient(to bottom, var(--opposite-color), var(--opposite-color-gradient)) ;
+}
+
 a.menu-button{
     
 }
@@ -1883,7 +1887,7 @@ footer .contact-form button.filled-button:hover {
         margin-bottom: 30px;
     }
     .more-info .right-content {
-        padding: 30px;
+        padding: 10px;
     }
     footer {
         padding: 80px 0px 20px 0px;
@@ -1989,12 +1993,11 @@ footer .contact-form button.filled-button:hover {
 
 
 
-.img-pdf{
-   
-   width: auto;
+.img-pdf img{   
+   width: 100%;
 }
-.img-pdf img{
-    width: 450px;
+.img-pdf{
+    
     bottom: 0; 
     
 }
@@ -2039,5 +2042,4 @@ footer .contact-form button.filled-button:hover {
     margin-left: 30px !important;
     
 }
-
 
