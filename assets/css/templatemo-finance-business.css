@@ -2032,11 +2032,12 @@ footer .contact-form button.filled-button:hover {
     box-shadow: -3px 3px 8px gray;
     color: white;
     opacity: 0.5;
-    background-color: var(--main-color-gradient);
+    background: linear-gradient(180deg, var(--main-color), var(--main-color-gradient), var(--main-color-gradient), var(--main-color-gradient), var(--main-color-gradient)) ;
     border-radius: 5px;
     border-left: 5px solid var(--complementary-color);
     margin: 5px 0;
     margin-left: 30px !important;
     
 }
+
 
